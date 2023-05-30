@@ -5,8 +5,8 @@ Kiến thức nền tảng
   Xử lý ảnh cơ bản: Sharpen, Find Contours, Canny, Houghline
   
   DL cơ bản:
+  
     Classifier: VGG
-    
     Detection: Yolo series, LSTM
     
 Công nghệ hiện tại
