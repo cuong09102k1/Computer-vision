@@ -6,6 +6,7 @@ Kiến thức nền tảng
   
   DL cơ bản:
     Classifier: VGG
+    
     Detection: Yolo series, LSTM
     
 Công nghệ hiện tại
