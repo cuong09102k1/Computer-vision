@@ -1,12 +1,12 @@
 Kiến thức nền tảng
 
-  ML cơ bản: Linear Regression, Logistic Regression, K-Means
+  ML cơ bản: Linear Regression, Logistic Regression, KNN, K-Means
   
   Xử lý ảnh cơ bản: Sharpen, Find Contours, Canny, Houghline
   
   DL cơ bản:
   
-    Classifier: VGG
+    Classifier: VGG16, resnet
     Detection: Yolo series, LSTM
     
 Công nghệ hiện tại
