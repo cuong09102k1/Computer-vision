@@ -1,0 +1,24 @@
+1. Xuất mô hình từ pytorch, tensorflow sang ONNX
+Code trong file: pytorch_convert_to_ONNX.ipynb, tensorflow_convert_to_ONNX.ipynb
+Trong phần pytorch_convert_to_ONNX.ipynb có phần warm-up. Time infer sau khi warm-up tuy có nhiều lúc bất thường nhưng vẫn khá đều
+
+2. Cách sử dụng ONNX:
+Code trong file: Use_ONNX.ipynb
+
+3. Quantize static model ONNX:
+Chuyển đổi từ FB32 sang FB16
+Kích thước giảm đi khoảng 2 lần: 32KB còn 16KB
+Tốc độ có giảm đi đôi chút khi cho infer toàn bộ tập test(trước quantize: 1.17ms, sau quantize: 1.1 ms)
+Độ chính xác gần như không thay đổi trước và sau quantize
+Nhận xét: Quantize static phù hợp cho những mô hình CNN, quantize đã giảm dung lượng đáng kể và cũng cho thời gian infer tốt hơn đồng thời, chưa thấy mất mát nhiều về độ chính xác
+
+4. Quantize dynamic model ONNX:
+Chuyển đổi từ FB32 sang QUInt8
+Kích thước giảm đi 4 lần: 244mB còn 61mB
+Tốc độ có giảm đi đôi chút khi cùng cho infer một bức ảnh(trước quantize: 23.18ms, sau quantize: 22.46ms)
+Độ chính xác gần như không thay đổi trước và sau khi quantize
+Nhận xét: Quantize dynamic phù hợp với những mô hình RNN
+
+Nhận xét chung về Quantize:
+Hạn chế: có thể dễ dàng sử dụng nhiều phương pháp quantize hơn khi ở frame-work pytorch, tuy nhiên khi convert sang ONNX thì không hỗ trợ convert cho các kiểu dữ liệu khác ngoài FB32
+
