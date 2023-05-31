@@ -1,6 +1,7 @@
 1. Nhận diện cử chỉ tay điều khiển PP
 Sử dụng thư viện openCV và mediapipe để lấy ra tọa độ của bộ điểm trên bàn tay, từ đó thiết lập những ngưỡng khoảng cách giữa một số điểm để kích hoạt các chế độ điều khiển slide.
 Các hoạt động điều khiển slide: chuyển slide(chuyển xuôi, ngược), phóng to slide tại một vị trí bất kỳ(vị trí đó được điều khiển bằng chuột, cũng được điều khiển bởi tay), thu nhỏ slide.
+Có video demo trong folder 
 
 2. Nhận diện động tác tập thể dục:
 Thu thập dữ liệu tọa độ nhiều điểm bằng cách sử dụng mediapipe. 
