@@ -6,13 +6,13 @@ Kiến thức nền tảng
   
   DL cơ bản:
   
-    Classifier: VGG16, resnet
-    Detection: Yolo series, LSTM
+    Classifier: VGG16, resnet cho images shoe, chữ số viết tay MNIST sử dụng frame-work: tensorflow, pytorch
+    Detection: Yolo series, LSTM, Mediapipe cho bài toán nhận diện cử chỉ tay, nhận diện động tác thể dục
     
 Công nghệ hiện tại
 
   Convert model to ONNX:
-	
+  
     Tìm hiểu cách chuyển đổi từ mô hình pytorch, tensorflow sang ONNX
     Cách sử dụng model ONNX
-    Quantize model ONNX
+    Quantize dynamic, static model ONNX 
